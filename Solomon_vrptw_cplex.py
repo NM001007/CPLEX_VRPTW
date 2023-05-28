@@ -10,10 +10,10 @@ import os
 rnd = np.random
 rnd.seed(0)
 
-def vrptw_cplex(dataframe, dataset):
+def vrptw_cplex(dataframe, dataset, length):
     print(dataframe.head())
     depot_data = dataframe[0:1]
-    clients = dataframe[1:]
+    clients = dataframe[1:length]
     length = len(clients)
     
     n = len(clients)
