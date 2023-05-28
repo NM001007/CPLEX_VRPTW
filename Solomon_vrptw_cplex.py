@@ -98,10 +98,8 @@ if __name__ == '__main__':
     length = 15
     print(dataset_name, length)
     print(f"Dataset: {dataset_name}, Length = {length}")
-    file = pd.read_csv("Dataset_Path/"+dataset_name+".txt", delim_whitespace=True)
+    file = pd.read_csv("./Data/"+dataset_name+".txt", delim_whitespace=True)
     vrptw_cplex(file, dataset_name, length)
-    path = './Log_'+dataset_name+'_'+str(length)+'.txt'
-    sys.stdout = open(path, 'w')
 
 
 
